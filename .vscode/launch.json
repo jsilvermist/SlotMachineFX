@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "SlotMachine",
+      "request": "launch",
+      "mainClass": "slotmachine.SlotMachine",
+      "projectName": "SlotMachineFX",
+      "vmArgs": "--module-path D:\\Development\\Java\\javafx-sdk-12.0.1\\lib\\ --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
