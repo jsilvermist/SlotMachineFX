@@ -32,17 +32,17 @@
                     <children>
                         <StackPane>
                           <children>
-                              <Rectangle fx:id="imageBlock1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="imageBlock1" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
                           </children>
                         </StackPane>
                         <StackPane GridPane.columnIndex="1">
                           <children>
-                              <Rectangle fx:id="imageBlock2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="imageBlock2" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
                           </children>
                         </StackPane>
                         <StackPane GridPane.columnIndex="2">
                           <children>
-                              <Rectangle fx:id="imageBlock3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                              <Rectangle fx:id="imageBlock3" arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="100.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
                           </children>
                         </StackPane>
                     </children>
@@ -52,10 +52,19 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <FlowPane alignment="CENTER">
+            <FlowPane alignment="CENTER" hgap="20.0" vgap="10.0">
               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You bet: " />
-                  <Text fx:id="textBlock2" layoutX="286.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                  <HBox>
+                     <children>
+                        <Label text="Money: $" />
+                        <Text fx:id="moneyText" strokeType="OUTSIDE" strokeWidth="0.0" text="null" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="resultTextContainer">
+                     <children>
+                        <Text fx:id="resultText" strokeType="OUTSIDE" strokeWidth="0.0" text="resultText" />
+                     </children>
+                  </HBox>
               </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
