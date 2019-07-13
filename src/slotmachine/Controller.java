@@ -7,16 +7,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
 public class Controller implements Initializable {
 
-  @FXML private Rectangle imageBlock1;
-  @FXML private Rectangle imageBlock2;
-  @FXML private Rectangle imageBlock3;
+  @FXML private ImageView imageBlock1;
+  @FXML private ImageView imageBlock2;
+  @FXML private ImageView imageBlock3;
 
   @FXML private Text moneyText;
   @FXML private Text resultText;
@@ -59,22 +58,22 @@ public class Controller implements Initializable {
   }
 
   private void spin() {
-    imageBlock1.setFill(new ImagePattern(getRandomImage()));
-    imageBlock2.setFill(new ImagePattern(getRandomImage()));
-    imageBlock3.setFill(new ImagePattern(getRandomImage()));
+    imageBlock1.setImage(getRandomImage());
+    imageBlock2.setImage(getRandomImage());
+    imageBlock3.setImage(getRandomImage());
   }
 
-  public void userBet1() {
+  public void handleBet1() {
     betAmount = 1;
     bet();
   }
 
-  public void userBet2() {
+  public void handleBet2() {
     betAmount = 2;
     bet();
   }
 
-  public void userBet5() {
+  public void handleBet5() {
     betAmount = 5;
     bet();
   }

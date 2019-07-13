@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -28,7 +29,9 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     // Initialize window
     window = primaryStage;
+    window.initStyle(StageStyle.DECORATED);
     window.setTitle("Slot Machine");
+    window.setResizable(false);
 
     // Create and activate welcome scene
     welcomeScene = getWelcomeScene();
