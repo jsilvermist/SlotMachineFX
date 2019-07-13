@@ -1,15 +1,18 @@
 package slotmachine;
 
+import java.io.IOException;
+
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class SlotMachine extends Application {
+public class Main extends Application {
 
   final int WINDOW_WIDTH = 640;
   final int WINDOW_HEIGHT = 480;
@@ -56,20 +59,8 @@ public class SlotMachine extends Application {
     return new Scene(layout, WINDOW_WIDTH, WINDOW_HEIGHT);
   }
 
-  private Scene getGameScene() {
-    // Create layout
-    StackPane layout = new StackPane();
-
-    // Create return button
-    Button returnButton = new Button("Return to welcome screen");
-    returnButton.setOnAction(event -> window.setScene(welcomeScene));
-
-    // Append elements to content box
-    layout.getChildren().add(returnButton);
-
-    // StackPane stack = new StackPane();
-    // stack.getChildren().addAll(new Rectangle(100,100,Color.BLUE), new Label("Go!"));
-
+  private Scene getGameScene() throws IOException {
+    Parent layout = FXMLLoader.load(getClass().getResource("slotmachine.fxml"));
     return new Scene(layout, WINDOW_WIDTH, WINDOW_HEIGHT);
   }
 
