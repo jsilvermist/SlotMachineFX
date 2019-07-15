@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -49,15 +50,16 @@ public class Main extends Application {
     VBox layout = new VBox(20);
     layout.setAlignment(Pos.CENTER);
 
-    // Create welcome label
+    // Create welcome logo, label, and play button
+    ImageView logo = new ImageView(ReelIcon.SEVEN.IMAGE);
+    logo.setFitWidth(200);
+    logo.setFitHeight(200);
     Label label = new Label("Welcome to my terrible...ly amazing slot machine!");
-
-    // Create play button
     Button button = new Button("PLAY");
     button.setOnAction(event -> window.setScene(gameScene));
 
     // Append elements to content box
-    layout.getChildren().addAll(label, button);
+    layout.getChildren().addAll(logo, label, button);
 
     return new Scene(layout, WINDOW_WIDTH, WINDOW_HEIGHT);
   }
