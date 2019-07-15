@@ -28,17 +28,17 @@ public class Controller implements Initializable {
 
   private DecimalFormat df = new DecimalFormat("0.00");
 
-  private ReelIcons[] selection = new ReelIcons[3];
+  private Reel reel = new Reel();
   private double totalMoney = 50.0;
   private int betAmount = 0;
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    populateImagesBlocks();
-    populateText();
+    initializeImagesBlocks();
+    initializeText();
   }
 
-  private void populateImagesBlocks() {
+  private void initializeImagesBlocks() {
     imageBlocks = new ImageView[] {
       imageBlock1,
       imageBlock2,
@@ -46,47 +46,21 @@ public class Controller implements Initializable {
     };
   }
 
-  private void populateText() {
+  private void updateImageBlocks() {
+    ReelIcons[] icons = reel.getReelIcons();
+    for (int i = 0; i < 3; i++) {
+      imageBlocks[i].setImage(icons[i].IMAGE);
+    }
+  }
+
+  private void initializeText() {
     resultTextContainer.setVisible(false);
     resultTextContainer.setManaged(false);
     moneyText.setText(df.format(totalMoney));
   }
 
-  private void spin() {
-    for (int i = 0; i < selection.length; i++) {
-      selection[i] = ReelIcons.getRandom();
-      imageBlocks[i].setImage(selection[i].IMAGE);
-    }
-  }
-
-  private void checkWin() {
-    resultTextContainer.setVisible(true);
-    resultTextContainer.setManaged(true);
-
-    ReelIcons matchedIcon = null;
-    int numberOfMatchingIcons = 0;
-
-    if (selection[0] == selection[1] && selection[0] == selection[2]) {
-      // Matched 3
-      matchedIcon = selection[0];
-      numberOfMatchingIcons = 3;
-    } else if (selection[0] == selection[1] || selection[0] == selection[2]) {
-      // Matched 2
-      matchedIcon = selection[0];
-      numberOfMatchingIcons = 2;
-    } else if (selection[1] == selection[2]) {
-      // Matched 2
-      matchedIcon = selection[1];
-      numberOfMatchingIcons = 2;
-    }
-
-    double winnings = 0;
-
-    if (numberOfMatchingIcons == 3) {
-      winnings = (matchedIcon.SCORE / 10.0) * betAmount;
-    } else if (numberOfMatchingIcons == 2) {
-      winnings = (matchedIcon.SCORE / 30.0) * betAmount;
-    }
+  private void checkSpinResult() {
+    double winnings = reel.getWinnings(betAmount);
 
     if (winnings > 0) {
       resultText.setText("You bet $" + betAmount + " and won $" + df.format(winnings) + ".");
@@ -115,15 +89,21 @@ public class Controller implements Initializable {
     if (totalMoney < 1) {
       // Game over
       bet1Button.setDisable(true);
-      resultText.setText("Game Over!");
+      resultText.setText("Game over!");
     }
   }
 
   private void bet() {
-    spin();
-    checkWin();
+    reel.spin();
+    updateImageBlocks();
+    checkSpinResult();
     checkMoney();
+
+    resultTextContainer.setVisible(true);
+    resultTextContainer.setManaged(true);
   }
+
+  // Handle Events
 
   public void handleBet1() {
     betAmount = 1;
