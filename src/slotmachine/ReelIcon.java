@@ -7,7 +7,7 @@ import java.util.Random;
 
 import javafx.scene.image.Image;
 
-public enum ReelIcons {
+public enum ReelIcon {
 
   LEMON("/assets/lemon.png", 10),
   CHERRY("/assets/cherry.png", 15),
@@ -20,11 +20,11 @@ public enum ReelIcons {
 
   // Static
 
-  private static final List<ReelIcons> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
+  private static final List<ReelIcon> VALUES = Collections.unmodifiableList(Arrays.asList(values()));
   private static final int SIZE = VALUES.size();
   private static final Random RANDOM = new Random();
 
-  public static ReelIcons getRandom()  {
+  public static ReelIcon getRandom()  {
     return VALUES.get(RANDOM.nextInt(SIZE));
   }
 
@@ -33,7 +33,7 @@ public enum ReelIcons {
   public final int SCORE;
   public final Image IMAGE;
 
-  ReelIcons(String assetPath, int scoreWeight) {
+  ReelIcon(String assetPath, int scoreWeight) {
     SCORE = scoreWeight;
     IMAGE = new Image(assetPath);
   }

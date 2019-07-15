@@ -47,7 +47,7 @@ public class Controller implements Initializable {
   }
 
   private void updateImageBlocks() {
-    ReelIcons[] icons = reel.getReelIcons();
+    ReelIcon[] icons = reel.getReelIcons();
     for (int i = 0; i < 3; i++) {
       imageBlocks[i].setImage(icons[i].IMAGE);
     }
@@ -93,7 +93,7 @@ public class Controller implements Initializable {
     }
   }
 
-  private void bet() {
+  private void spinReel() {
     reel.spin();
     updateImageBlocks();
     checkSpinResult();
@@ -107,17 +107,17 @@ public class Controller implements Initializable {
 
   public void handleBet1() {
     betAmount = 1;
-    bet();
+    spinReel();
   }
 
   public void handleBet2() {
     betAmount = 2;
-    bet();
+    spinReel();
   }
 
   public void handleBet5() {
     betAmount = 5;
-    bet();
+    spinReel();
   }
 
 }

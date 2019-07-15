@@ -4,26 +4,26 @@ import java.util.Arrays;
 
 public class Reel {
 
-  private ReelIcons[] selectedIcons = new ReelIcons[3];
+  private ReelIcon[] selectedIcons = new ReelIcon[3];
 
   Reel() {
     for (int i = 0; i < selectedIcons.length; i++) {
-      selectedIcons[i] = ReelIcons.SEVEN;
+      selectedIcons[i] = ReelIcon.SEVEN;
     }
   }
 
   public void spin() {
     for (int i = 0; i < selectedIcons.length; i++) {
-      selectedIcons[i] = ReelIcons.getRandom();
+      selectedIcons[i] = ReelIcon.getRandom();
     }
   }
 
-  public ReelIcons[] getReelIcons() {
+  public ReelIcon[] getReelIcons() {
     return Arrays.copyOf(selectedIcons, selectedIcons.length);
   }
 
   public double getWinnings(double betAmount) {
-    ReelIcons matchedIcon = null;
+    ReelIcon matchedIcon = null;
     int numberOfMatchingIcons = 0;
 
     if (selectedIcons[0] == selectedIcons[1] && selectedIcons[0] == selectedIcons[2]) {
