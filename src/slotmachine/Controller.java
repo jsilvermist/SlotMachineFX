@@ -27,7 +27,7 @@ public class Controller implements Initializable {
   @FXML private Button bet2Button;
   @FXML private Button bet5Button;
 
-  DecimalFormat df = new DecimalFormat("0.00");
+  private DecimalFormat df = new DecimalFormat("0.00");
 
   private Image[] images = new Image[8];
   private int[] selection = new int[3];
