@@ -4,8 +4,10 @@ import java.net.URL;
 import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -21,15 +23,18 @@ public class Controller implements Initializable {
   @FXML private Text moneyText;
   @FXML private Text resultText;
   @FXML private HBox resultTextContainer;
+  @FXML private HBox playAgainContainer;
 
   @FXML private Button bet1Button;
   @FXML private Button bet2Button;
   @FXML private Button bet5Button;
+  @FXML private Button playAgainButton;
+
+  private final double INITIAL_MONEY = 50.0;
 
   private DecimalFormat df = new DecimalFormat("0.00");
-
   private Reel reel = new Reel();
-  private double totalMoney = 50.0;
+  private double totalMoney = INITIAL_MONEY;
   private int betAmount = 0;
 
   @Override
@@ -50,6 +55,12 @@ public class Controller implements Initializable {
     ReelIcon[] icons = reel.getReelIcons();
     for (int i = 0; i < 3; i++) {
       imageBlocks[i].setImage(icons[i].IMAGE);
+    }
+  }
+
+  private void resetImageBlocks() {
+    for (int i = 0; i < 3; i++) {
+      imageBlocks[i].setImage(ReelIcon.SEVEN.IMAGE);
     }
   }
 
@@ -90,6 +101,10 @@ public class Controller implements Initializable {
       // Game over
       bet1Button.setDisable(true);
       resultText.setText("Game over!");
+      playAgainContainer.setVisible(true);
+      playAgainContainer.setManaged(true);
+    } else {
+      bet1Button.setDisable(false);
     }
   }
 
@@ -118,6 +133,18 @@ public class Controller implements Initializable {
   public void handleBet5() {
     betAmount = 5;
     spinReel();
+  }
+
+  public void handlePlayAgain(ActionEvent event) {
+    Node source = (Node)event.getSource();
+    Node container = source.getParent();
+    container.setVisible(false);
+    container.setManaged(false);
+
+    totalMoney = INITIAL_MONEY;
+    initializeText();
+    checkMoney();
+    resetImageBlocks();
   }
 
 }
