@@ -21,7 +21,7 @@ JavaFX SDK `lib` directory in the module path in VSCode's launch configuration:
   "request": "launch",
   "mainClass": "slotmachine.Main",
   "projectName": "SlotMachineFX",
-  "vmArgs": "--module-path D:\\Development\\Java\\javafx-sdk-12.0.1\\lib\\ --add-modules javafx.controls,javafx.fxml"
+  "vmArgs": "--module-path C:\\javafx-sdk-12.0.1\\lib\\ --add-modules javafx.controls,javafx.fxml"
 }
 ```
 
@@ -30,10 +30,10 @@ You will also need to edit the `.classpath` file to point to the JavaFX SDK libr
 > .classpath
 
 ```xml
-<classpathentry kind="lib" path="D:\Development\Java\javafx-sdk-12.0.1\lib\javafx.base.jar"/>
-<classpathentry kind="lib" path="D:\Development\Java\javafx-sdk-12.0.1\lib\javafx.graphics.jar"/>
-<classpathentry kind="lib" path="D:\Development\Java\javafx-sdk-12.0.1\lib\javafx.controls.jar"/>
-<classpathentry kind="lib" path="D:\Development\Java\javafx-sdk-12.0.1\lib\javafx.fxml.jar"/>
+<classpathentry kind="lib" path="C:\javafx-sdk-12.0.1\lib\javafx.base.jar"/>
+<classpathentry kind="lib" path="C:\javafx-sdk-12.0.1\lib\javafx.graphics.jar"/>
+<classpathentry kind="lib" path="C:\javafx-sdk-12.0.1\lib\javafx.controls.jar"/>
+<classpathentry kind="lib" path="C:\javafx-sdk-12.0.1\lib\javafx.fxml.jar"/>
 ```
 
 You should now be able to run and debug using VSCode's CodeLens or debugger!
