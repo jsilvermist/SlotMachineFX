@@ -42,7 +42,7 @@ public class Reel {
     if (numberOfMatchingIcons == 3) {
       winnings = (matchedIcon.SCORE / 10.0) * betAmount;
     } else if (numberOfMatchingIcons == 2) {
-      winnings = (matchedIcon.SCORE / 30.0) * betAmount;
+      winnings = (matchedIcon.SCORE / 40.0) * betAmount;
     }
 
     return winnings;

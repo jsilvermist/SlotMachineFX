@@ -114,4 +114,11 @@
          </BorderPane.margin>
       </Label>
    </bottom>
+   <top>
+      <Button mnemonicParsing="false" onAction="#handleShowPayouts" text="Payouts" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
 </BorderPane>

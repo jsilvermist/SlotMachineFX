@@ -147,4 +147,8 @@ public class Controller implements Initializable {
     resetImageBlocks();
   }
 
+  public void handleShowPayouts(ActionEvent event) {
+    Main.payoutsWindow.show();
+  }
+
 }

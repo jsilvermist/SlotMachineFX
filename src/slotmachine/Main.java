@@ -16,6 +16,8 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
+  static Payouts payoutsWindow = new Payouts();
+
   final int WINDOW_WIDTH = 640;
   final int WINDOW_HEIGHT = 480;
 
