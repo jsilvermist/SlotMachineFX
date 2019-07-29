@@ -1,4 +1,4 @@
-package slotmachine;
+package slotmachine.component;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ public class Reel {
 
   private ReelIcon[] selectedIcons = new ReelIcon[3];
 
-  Reel() {
+  public Reel() {
     for (int i = 0; i < selectedIcons.length; i++) {
       selectedIcons[i] = ReelIcon.SEVEN;
     }

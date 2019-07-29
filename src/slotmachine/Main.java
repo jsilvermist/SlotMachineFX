@@ -14,15 +14,18 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import slotmachine.component.ReelIcon;
+import slotmachine.view.Payouts;
+
 public class Main extends Application {
 
-  static Payouts payoutsWindow = new Payouts();
+  public static final Payouts PAYOUTS = new Payouts();
 
-  final int WINDOW_WIDTH = 640;
-  final int WINDOW_HEIGHT = 480;
+  public final int WINDOW_WIDTH = 640;
+  public final int WINDOW_HEIGHT = 480;
 
-  Stage window;
-  Scene welcomeScene, gameScene;
+  public Stage window;
+  public Scene welcomeScene, gameScene;
 
   public static void main(String[] args) {
     launch(args);
@@ -67,7 +70,7 @@ public class Main extends Application {
   }
 
   private Scene getGameScene() throws IOException {
-    Parent layout = FXMLLoader.load(getClass().getResource("slotmachine.fxml"));
+    Parent layout = FXMLLoader.load(getClass().getResource("view/slotmachine.fxml"));
     return new Scene(layout, WINDOW_WIDTH, WINDOW_HEIGHT);
   }
 

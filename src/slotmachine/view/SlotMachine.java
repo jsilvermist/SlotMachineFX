@@ -1,4 +1,4 @@
-package slotmachine;
+package slotmachine.view;
 
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -13,7 +13,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
-public class Controller implements Initializable {
+import slotmachine.Main;
+import slotmachine.component.Reel;
+import slotmachine.component.ReelIcon;
+
+public class SlotMachine implements Initializable {
 
   @FXML private ImageView imageBlock1;
   @FXML private ImageView imageBlock2;
@@ -148,7 +152,7 @@ public class Controller implements Initializable {
   }
 
   public void handleShowPayouts(ActionEvent event) {
-    Main.payoutsWindow.show();
+    Main.PAYOUTS.show();
   }
 
 }

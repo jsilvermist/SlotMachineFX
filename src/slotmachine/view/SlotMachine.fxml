@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slotmachine.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slotmachine.view.SlotMachine">
    <center>
       <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
         <children>
@@ -35,7 +35,7 @@
                           <children>
                               <ImageView fx:id="imageBlock1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../assets/seven.png" />
+                                    <Image url="@../../assets/seven.png" />
                                  </image>
                               </ImageView>
                           </children>
@@ -44,7 +44,7 @@
                           <children>
                               <ImageView fx:id="imageBlock2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../assets/seven.png" />
+                                    <Image url="@../../assets/seven.png" />
                                  </image>
                               </ImageView>
                           </children>
@@ -53,7 +53,7 @@
                           <children>
                               <ImageView fx:id="imageBlock3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../assets/seven.png" />
+                                    <Image url="@../../assets/seven.png" />
                                  </image>
                               </ImageView>
                           </children>

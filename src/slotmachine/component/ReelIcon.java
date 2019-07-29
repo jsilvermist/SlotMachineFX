@@ -1,4 +1,4 @@
-package slotmachine;
+package slotmachine.component;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -9,14 +9,14 @@ import javafx.scene.image.Image;
 
 public enum ReelIcon {
 
-  LEMON("/assets/lemon.png", 10),
-  CHERRY("/assets/cherry.png", 15),
-  WATERMELON("/assets/watermelon.png", 20),
-  DIAMOND("/assets/diamond.png", 30),
-  CROWN("/assets/crown.png", 40),
-  BAR("/assets/bar.png", 60),
-  SEVEN("/assets/seven.png", 80),
-  TEN("/assets/ten.png", 100);
+  LEMON("/assets/lemon.png", 20),
+  CHERRY("/assets/cherry.png", 30),
+  WATERMELON("/assets/watermelon.png", 40),
+  DIAMOND("/assets/diamond.png", 60),
+  CROWN("/assets/crown.png", 80),
+  BAR("/assets/bar.png", 100),
+  SEVEN("/assets/seven.png", 120),
+  TEN("/assets/ten.png", 160);
 
   // Static
 
@@ -33,7 +33,7 @@ public enum ReelIcon {
   public final int SCORE;
   public final Image IMAGE;
 
-  ReelIcon(String assetPath, int scoreWeight) {
+  private ReelIcon(String assetPath, int scoreWeight) {
     SCORE = scoreWeight;
     IMAGE = new Image(assetPath);
   }

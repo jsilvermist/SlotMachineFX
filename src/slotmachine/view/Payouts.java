@@ -1,4 +1,4 @@
-package slotmachine;
+package slotmachine.view;
 
 import java.io.IOException;
 
@@ -9,11 +9,13 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import slotmachine.component.ReelIcon;
+
 public class Payouts {
 
   private Stage window = new Stage();
 
-  Payouts() {
+  public Payouts() {
     try {
       Parent layout = FXMLLoader.load(getClass().getResource("payouts.fxml"));
       populateLayout(layout);
@@ -38,6 +40,7 @@ public class Payouts {
 
   public void show() {
     window.show();
+    window.toFront();
   }
 
 }
