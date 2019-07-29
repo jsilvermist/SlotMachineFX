@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label style="-fx-font-weight: 700;" text="Payouts">
          <font>
@@ -25,17 +25,9 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="Fruit" GridPane.columnIndex="0">
+            <Label text="Reel Icon" GridPane.columnIndex="0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -50,46 +42,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@../../assets/lemon.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@../../assets/cherry.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../../assets/diamond.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@../../assets/watermelon.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@../../assets/crown.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
-               <image>
-                  <Image url="@../../assets/bar.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
-               <image>
-                  <Image url="@../../assets/seven.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
-               <image>
-                  <Image url="@../../assets/ten.png" />
-               </image>
-            </ImageView>
          </children>
       </GridPane>
    </children>
