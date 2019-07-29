@@ -38,6 +38,7 @@ public class Main extends Application {
     window.initStyle(StageStyle.DECORATED);
     window.setTitle("Slot Machine");
     window.setResizable(false);
+    window.getIcons().add(ReelIcon.SEVEN.IMAGE);
 
     // Create and activate welcome scene
     welcomeScene = getWelcomeScene();

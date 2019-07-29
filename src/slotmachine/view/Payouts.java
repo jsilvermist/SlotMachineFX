@@ -21,6 +21,7 @@ public class Payouts {
       populateLayout(layout);
       Scene scene = new Scene(layout);
       window.setTitle("Payouts | Slot Machine");
+      window.getIcons().add(ReelIcon.SEVEN.IMAGE);
       window.setScene(scene);
     } catch (IOException e) {
       e.printStackTrace();
