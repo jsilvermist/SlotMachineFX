@@ -38,4 +38,12 @@ public enum ReelIcon {
     IMAGE = new Image(assetPath);
   }
 
+  public double getMatched2Multiplier() {
+    return SCORE / 40.0;
+  }
+
+  public double getMatched3Multiplier() {
+    return SCORE / 10.0;
+  }
+
 }

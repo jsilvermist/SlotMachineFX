@@ -31,9 +31,9 @@ public class Payouts {
     GridPane grid = (GridPane)layout.lookup("#payoutsGrid");
     ReelIcon[] icons = ReelIcon.values();
     for (int i = 0; i < icons.length; i++) {
-      Text matched2 = new Text((icons[i].SCORE / 40.0) + "x");
+      Text matched2 = new Text(icons[i].getMatched2Multiplier() + "x");
       grid.add(matched2, 1, i+1);
-      Text matched3 = new Text((icons[i].SCORE / 10.0) + "x");
+      Text matched3 = new Text(icons[i].getMatched3Multiplier() + "x");
       grid.add(matched3, 2, i+1);
     }
   }

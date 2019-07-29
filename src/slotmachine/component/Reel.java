@@ -40,9 +40,9 @@ public class Reel {
     double winnings = 0;
 
     if (numberOfMatchingIcons == 3) {
-      winnings = (matchedIcon.SCORE / 10.0) * betAmount;
+      winnings = matchedIcon.getMatched3Multiplier() * betAmount;
     } else if (numberOfMatchingIcons == 2) {
-      winnings = (matchedIcon.SCORE / 40.0) * betAmount;
+      winnings = matchedIcon.getMatched2Multiplier() * betAmount;
     }
 
     return winnings;
