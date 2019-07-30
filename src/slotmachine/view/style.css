@@ -1,0 +1,52 @@
+.root {
+  -fx-background: #fff;
+}
+
+Button {
+  -fx-padding: 6 12 6 12;
+  -fx-border-color: rgba(0,0,0,0.1);
+  -fx-border-width: 1;
+  -fx-border-radius: 4;
+  -fx-background-radius: 4;
+  -fx-background-color: #fff;
+  -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  -fx-font-size: 10pt;
+  -fx-text-fill: #333;
+  -fx-background-insets: 0 0 0 0, 0, 1, 2;
+  -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.8), 6, 0, 1, 1);
+  -fx-cursor: hand;
+}
+
+Button:hover,
+Button:focused {
+  -fx-border-color: rgba(0,0,0,0);
+  -fx-background-insets: 0 0 0 0;
+  -fx-effect: innershadow(one-pass-box, rgba(0,0,0,0.8), 6, 0, 1, 1);
+  -fx-background-color: #eee;
+}
+
+Button:pressed {
+  -fx-border-color: rgba(0,0,0,0);
+  -fx-background-insets: 0 0 0 0;
+  -fx-effect: innershadow(gaussian, rgba(0,0,0,0.8), 6, 0, 1, 1);
+  -fx-background-color: #eee;
+}
+
+Label, Text {
+  -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  -fx-font-size: 10pt;
+}
+
+GridPane Line {
+  -fx-stroke: rgba(0,0,0,0.3);
+  -fx-effect: dropshadow(three-pass-box, #000, 10, 0.1, 0, 0);
+}
+
+.title {
+  -fx-font-size: 16pt;
+  -fx-font-weight: bold;
+}
+
+.faded {
+  -fx-text-fill: #0000007e;
+}
