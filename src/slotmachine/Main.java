@@ -35,10 +35,10 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     // Initialize window
     window = primaryStage;
-    window.initStyle(StageStyle.DECORATED);
     window.setTitle("Slot Machine");
-    window.setResizable(false);
     window.getIcons().add(ReelIcon.SEVEN.IMAGE);
+    window.setResizable(false);
+    window.initStyle(StageStyle.DECORATED);
 
     // Create and activate welcome scene
     welcomeScene = getWelcomeScene();

@@ -23,6 +23,7 @@ public class Payouts {
       Scene scene = new Scene(layout);
       window.setTitle("Payouts | Slot Machine");
       window.getIcons().add(ReelIcon.SEVEN.IMAGE);
+      window.setResizable(false);
       window.setScene(scene);
     } catch (IOException e) {
       e.printStackTrace();
