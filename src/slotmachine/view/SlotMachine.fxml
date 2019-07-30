@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
@@ -112,10 +113,24 @@
       </Label>
    </bottom>
    <top>
-      <Button mnemonicParsing="false" onAction="#handleShowPayouts" text="Payouts" BorderPane.alignment="TOP_RIGHT">
-         <BorderPane.margin>
-            <Insets right="10.0" top="10.0" />
-         </BorderPane.margin>
-      </Button>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="High Score: $">
+               <HBox.margin>
+                  <Insets left="4.0" top="4.0" />
+               </HBox.margin>
+            </Label>
+            <Text fx:id="highScoreText" strokeType="OUTSIDE" strokeWidth="0.0" text="null">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin>
+            </Text>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#handleShowPayouts" text="Payouts" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
    </top>
 </BorderPane>

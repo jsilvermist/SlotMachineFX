@@ -26,6 +26,7 @@ public class SlotMachine implements Initializable {
 
   @FXML private Text moneyText;
   @FXML private Text resultText;
+  @FXML private Text highScoreText;
   @FXML private HBox resultTextContainer;
   @FXML private HBox playAgainContainer;
 
@@ -39,6 +40,7 @@ public class SlotMachine implements Initializable {
   private DecimalFormat df = new DecimalFormat("0.00");
   private Reel reel = new Reel();
   private double totalMoney = INITIAL_MONEY;
+  private double highScore = INITIAL_MONEY;
   private int betAmount = 0;
 
   @Override
@@ -72,6 +74,7 @@ public class SlotMachine implements Initializable {
     resultTextContainer.setVisible(false);
     resultTextContainer.setManaged(false);
     moneyText.setText(df.format(totalMoney));
+    highScoreText.setText(df.format(highScore));
   }
 
   private void checkSpinResult() {
@@ -109,6 +112,12 @@ public class SlotMachine implements Initializable {
       playAgainContainer.setManaged(true);
     } else {
       bet1Button.setDisable(false);
+    }
+
+    if (totalMoney > highScore) {
+      // TODO: Save high score in file using properties api
+      highScore = totalMoney;
+      highScoreText.setText(df.format(highScore));
     }
   }
 
