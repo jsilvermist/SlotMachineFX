@@ -14,6 +14,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
 import slotmachine.Main;
+import slotmachine.component.FileHandler;
 import slotmachine.component.Reel;
 import slotmachine.component.ReelIcon;
 
@@ -38,9 +39,10 @@ public class SlotMachine implements Initializable {
   private final double INITIAL_MONEY = 50.0;
 
   private DecimalFormat df = new DecimalFormat("0.00");
+  private FileHandler config = new FileHandler();
   private Reel reel = new Reel();
   private double totalMoney = INITIAL_MONEY;
-  private double highScore = INITIAL_MONEY;
+  private double highScore = config.getProp("highscore", INITIAL_MONEY);
   private int betAmount = 0;
 
   @Override
@@ -115,9 +117,9 @@ public class SlotMachine implements Initializable {
     }
 
     if (totalMoney > highScore) {
-      // TODO: Save high score in file using properties api
       highScore = totalMoney;
       highScoreText.setText(df.format(highScore));
+      config.setProp("highscore", highScore);
     }
   }
 
