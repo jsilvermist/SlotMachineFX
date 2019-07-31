@@ -29,6 +29,7 @@ public class SlotMachine implements Initializable {
   @FXML private Text resultText;
   @FXML private Text highScoreText;
   @FXML private HBox resultTextContainer;
+  @FXML private HBox buttonsContainer;
   @FXML private HBox playAgainContainer;
 
   @FXML private Button bet1Button;
@@ -110,6 +111,8 @@ public class SlotMachine implements Initializable {
       // Game over
       bet1Button.setDisable(true);
       resultText.setText("Game over!");
+      buttonsContainer.setVisible(false);
+      buttonsContainer.setManaged(false);
       playAgainContainer.setVisible(true);
       playAgainContainer.setManaged(true);
     } else {
@@ -155,6 +158,8 @@ public class SlotMachine implements Initializable {
     Node container = source.getParent();
     container.setVisible(false);
     container.setManaged(false);
+    buttonsContainer.setVisible(true);
+    buttonsContainer.setManaged(true);
 
     totalMoney = INITIAL_MONEY;
     initializeText();
