@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class FileHandler {
 
-  private final Properties prop = new Properties();
+  private final Properties PROPS = new Properties();
   private File file;
 
   public FileHandler() {
@@ -29,7 +29,7 @@ public class FileHandler {
   private void initFile() {
     try {
       if (file.exists()) {
-        prop.load(new FileInputStream(file));
+        PROPS.load(new FileInputStream(file));
       } else {
         file.createNewFile();
       }
@@ -40,7 +40,7 @@ public class FileHandler {
 
   public void storeProps() {
     try {
-      prop.store(new FileOutputStream(file), null);
+      PROPS.store(new FileOutputStream(file), null);
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     } catch (IOException e) {
@@ -49,60 +49,60 @@ public class FileHandler {
   }
 
   public String getProp(String key, String defaultString) {
-    String sValue = prop.getProperty(key, defaultString);
+    String sValue = PROPS.getProperty(key, defaultString);
     return sValue;
   }
 
   public void setProp(String key, String value) {
-    prop.setProperty(key, value);
+    PROPS.setProperty(key, value);
     storeProps();
   }
 
   public int getProp(String key, int defaultValue) {
     String defaultString = String.valueOf(defaultValue);
-    String value = prop.getProperty(key, defaultString);
+    String value = PROPS.getProperty(key, defaultString);
     return Integer.valueOf(value);
   }
 
   public void setProp(String key, int value) {
     String sValue = String.valueOf(value);
-    prop.setProperty(key, sValue);
+    PROPS.setProperty(key, sValue);
     storeProps();
   }
 
   public long getProp(String key, long defaultValue) {
     String defaultString = String.valueOf(defaultValue);
-    String value = prop.getProperty(key, defaultString);
+    String value = PROPS.getProperty(key, defaultString);
     return Long.valueOf(value);
   }
 
   public void setProp(String key, long value) {
     String sValue = String.valueOf(value);
-    prop.setProperty(key, sValue);
+    PROPS.setProperty(key, sValue);
     storeProps();
   }
 
   public float getProp(String key, float defaultValue) {
     String defaultString = String.valueOf(defaultValue);
-    String value = prop.getProperty(key, defaultString);
+    String value = PROPS.getProperty(key, defaultString);
     return Float.valueOf(value);
   }
 
   public void setProp(String key, float value) {
     String sValue = String.valueOf(value);
-    prop.setProperty(key, sValue);
+    PROPS.setProperty(key, sValue);
     storeProps();
   }
 
   public double getProp(String key, double defaultValue) {
     String defaultString = String.valueOf(defaultValue);
-    String value = prop.getProperty(key, defaultString);
+    String value = PROPS.getProperty(key, defaultString);
     return Double.valueOf(value);
   }
 
   public void setProp(String key, double value) {
     String sValue = String.valueOf(value);
-    prop.setProperty(key, sValue);
+    PROPS.setProperty(key, sValue);
     storeProps();
   }
 

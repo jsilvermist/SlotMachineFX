@@ -30,7 +30,7 @@ public class Payouts {
     }
   }
 
-  public void populateLayout(Parent layout) {
+  private void populateLayout(Parent layout) {
     GridPane grid = (GridPane)layout.lookup("#payoutsGrid");
     ReelIcon[] icons = ReelIcon.values();
 

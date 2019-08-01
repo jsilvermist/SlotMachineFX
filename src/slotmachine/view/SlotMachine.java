@@ -167,7 +167,7 @@ public class SlotMachine implements Initializable {
     resetImageBlocks();
   }
 
-  public void handleShowPayouts(ActionEvent event) {
+  public void handleShowPayouts() {
     Main.PAYOUTS.show();
   }
 
