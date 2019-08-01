@@ -53,4 +53,10 @@ public class Payouts {
     window.toFront();
   }
 
+  public void close() {
+    if (window.isShowing()) {
+      window.close();
+    }
+  }
+
 }

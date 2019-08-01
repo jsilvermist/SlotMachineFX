@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
+import javafx.stage.WindowEvent;
 import slotmachine.component.ReelIcon;
 import slotmachine.view.Payouts;
 
@@ -39,6 +39,7 @@ public class Main extends Application {
     window.getIcons().add(ReelIcon.SEVEN.IMAGE);
     window.setResizable(false);
     window.initStyle(StageStyle.DECORATED);
+    window.setOnCloseRequest(event -> handleCloseRequested(event));
 
     // Create and activate welcome scene
     welcomeScene = getWelcomeScene();
@@ -74,6 +75,10 @@ public class Main extends Application {
   private Scene getGameScene() throws IOException {
     Parent layout = FXMLLoader.load(getClass().getResource("view/slotmachine.fxml"));
     return new Scene(layout, WINDOW_WIDTH, WINDOW_HEIGHT);
+  }
+
+  private void handleCloseRequested(WindowEvent event) {
+    PAYOUTS.close();
   }
 
 }
