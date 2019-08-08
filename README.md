@@ -6,6 +6,13 @@ A simple Java slot machine game developed with
 [SceneBuilder](https://gluonhq.com/products/scene-builder/),
 using [JavaFX 12](https://openjfx.io/) as a GUI library.
 
+| Table of Contents              |
+| ------------------------------ |
+| [1. Usage](#usage)             |
+| [2. Outline](#outline)         |
+| [3. UML Diagram](#uml-diagram) |
+| [4. GUI Screenshots](#gui)                 |
+
 ## Usage
 
 To run or debug this program, download and extract the
