@@ -9,14 +9,14 @@ import javafx.scene.image.Image;
 
 public enum ReelIcon {
 
-  LEMON("/assets/lemon.png", 20),
-  CHERRY("/assets/cherry.png", 30),
-  WATERMELON("/assets/watermelon.png", 40),
-  DIAMOND("/assets/diamond.png", 60),
-  CROWN("/assets/crown.png", 80),
-  BAR("/assets/bar.png", 100),
-  SEVEN("/assets/seven.png", 120),
-  TEN("/assets/ten.png", 160);
+  LEMON("/assets/lemon.png", 30),
+  CHERRY("/assets/cherry.png", 45),
+  WATERMELON("/assets/watermelon.png", 60),
+  DIAMOND("/assets/diamond.png", 90),
+  CROWN("/assets/crown.png", 120),
+  BAR("/assets/bar.png", 150),
+  SEVEN("/assets/seven.png", 180),
+  TEN("/assets/ten.png", 240);
 
   // Static
 
@@ -39,7 +39,7 @@ public enum ReelIcon {
   }
 
   public double getMatched2Multiplier() {
-    return SCORE / 40.0;
+    return SCORE / 60.0;
   }
 
   public double getMatched3Multiplier() {
